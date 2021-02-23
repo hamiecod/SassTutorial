@@ -1,0 +1,19 @@
+$primary-color: rgb(0, 255, 191);
+$text-color: rgb(255, 0, 0);
+$font-weights: (
+    "regular": 400,
+    "medium": 600,
+    "bold": 1100
+);
+body{
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#main{
+    color: $text-color;
+    font-weight: map-get($font-weights, bold);
+    text-align: center;
+    width: 800px;
+}
