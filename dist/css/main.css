@@ -12,10 +12,27 @@ body {
 }
 
 #main {
-  color: red;
   font-weight: bold;
   text-align: center;
-  width: 800px;
   font-size: 20px;
+}
+
+/* 
+#main{
+    properties: value;
+    properties: value;
+    p{
+        prop1: value;
+        prop2: value;
+    }
+}
+*/
+#main {
+  width: 700px;
+  margin: auto;
+}
+
+#main p {
+  color: #ff0088;
 }
 /*# sourceMappingURL=main.css.map */

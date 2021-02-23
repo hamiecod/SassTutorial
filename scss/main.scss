@@ -14,7 +14,7 @@
 // in scss you declare variables by prefixing the variable names with a dollar(peso) sign
 
 $primary-color: rgb(0, 255, 191);
-$text-color: rgb(255, 0, 0);
+$text-color: rgb(255, 0, 136);
 body{
     background: $primary-color;
     display: flex;
@@ -26,7 +26,7 @@ body{
 // when scss is compiled it changes the variables with their original values in css
 
 // maps in Scss
-// maps in scss are just like objects in javascript
+// maps in scss are just like objects/classes in javascript
 // the variable as said before is declared by prefixing the variable names with a dollar sign
 // all the keys are to be contained inside the parantheses
 $font-weights: (
@@ -41,11 +41,33 @@ $font-sizes: (
     "large": 28px
 );
 #main{
-    color: $text-color;
     // we can get the value of a key in an object by the following way:
     // map-get($mapName, keyName);
     font-weight: map-get($font-weights, bold);
     text-align: center;
-    width: 800px;
     font-size: map-get($font-sizes, medium );
 }
+
+// nesting in sass
+// if we want to trigger a paragraph inside main we will do the following obviously:
+// #main p{}
+// but in scss you can nest elements like if a paragraph is inside main you can write the properties for the paragraph inside the main element, example is as follows:
+/* 
+#main{
+    properties: value;
+    properties: value;
+    p{
+        prop1: value;
+        prop2: value;
+    }
+}
+*/
+// in the above given example the properties will imply to the paragraph inside the main div
+#main{
+    width: 700px;
+    margin: auto;
+    p{
+        color: $text-color;
+    }
+}
+// the nested scss will compile to become normal css
