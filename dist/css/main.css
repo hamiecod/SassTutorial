@@ -13,8 +13,9 @@ body {
 
 #main {
   color: red;
-  font-weight: 1100;
+  font-weight: bold;
   text-align: center;
   width: 800px;
+  font-size: 20px;
 }
 /*# sourceMappingURL=main.css.map */

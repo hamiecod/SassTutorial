@@ -1,19 +1,51 @@
+// we need SCSS compiler to compile scss to css
+// the scss is linked to css, and all the scss is converted to css
+
+// sass is just like css
+// it is css with superpowers and is a subset of css, meaning that all valid css is valid sass
+// sass has two syntaxes:
+// 1) Sass: it is the original syntax, the only difference is that it uses indentation instead of curly brackets
+// 2) Scss: it stands for sassy css, it is very similar to css and uses brackets 
+
+// for the sake of the tutorial, we will follow SCSS syntax
+
+// another awesome feature of SCSS is that it adds all the webkits and mozs so that the css is compatible in all browsers
+
+// in scss you declare variables by prefixing the variable names with a dollar(peso) sign
+
 $primary-color: rgb(0, 255, 191);
 $text-color: rgb(255, 0, 0);
-$font-weights: (
-    "regular": 400,
-    "medium": 600,
-    "bold": 1100
-);
 body{
     background: $primary-color;
     display: flex;
     justify-content: center;
     align-items:center;
 }
+// another property of scss that makes it widely compatible is as follows:
+// css variables are excepted in 90% browsers whereas scss variables have 100% compatibility
+// when scss is compiled it changes the variables with their original values in css
+
+// maps in Scss
+// maps in scss are just like objects in javascript
+// the variable as said before is declared by prefixing the variable names with a dollar sign
+// all the keys are to be contained inside the parantheses
+$font-weights: (
+    // "key": value,
+    "regular": 400,
+    "medium": 600,
+    "bold": bold
+);
+$font-sizes: (
+    "small": 12px,
+    "medium": 20px,
+    "large": 28px
+);
 #main{
     color: $text-color;
+    // we can get the value of a key in an object by the following way:
+    // map-get($mapName, keyName);
     font-weight: map-get($font-weights, bold);
     text-align: center;
     width: 800px;
+    font-size: map-get($font-sizes, medium );
 }
