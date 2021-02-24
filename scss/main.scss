@@ -5,7 +5,7 @@
 // it is css with superpowers and is a subset of css, meaning that all valid css is valid sass
 // sass has two syntaxes:
 // 1) Sass: it is the original syntax, the only difference is that it uses indentation instead of curly brackets
-// 2) Scss: it stands for sassy css, it is very similar to css and uses brackets 
+// 2) Scss: it stands for sassy css, it is very similar to css and uses brackets
 
 // for the sake of the tutorial, we will follow SCSS syntax
 
@@ -15,11 +15,12 @@
 
 $primary-color: rgb(0, 255, 191);
 $text-color: rgb(255, 0, 136);
-body{
-    background: $primary-color;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+body {
+  background: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 // another property of scss that makes it widely compatible is as follows:
 // css variables are excepted in 90% browsers whereas scss variables have 100% compatibility
@@ -30,22 +31,23 @@ body{
 // the variable as said before is declared by prefixing the variable names with a dollar sign
 // all the keys are to be contained inside the parantheses
 $font-weights: (
-    // "key": value,
-    "regular": 400,
-    "medium": 600,
-    "bold": bold
+  // "key": value,
+  "regular": 400,
+  "medium": 600,
+  "bold": bold
 );
 $font-sizes: (
-    "small": 12px,
-    "medium": 20px,
-    "large": 28px
+  "small": 12px,
+  "medium": 20px,
+  "large": 28px,
 );
-#main{
-    // we can get the value of a key in an object by the following way:
-    // map-get($mapName, keyName);
-    font-weight: map-get($font-weights, bold);
-    text-align: center;
-    font-size: map-get($font-sizes, medium );
+.main {
+  // we can get the value of a key in an object by the following way:
+  // map-get($mapName, keyName);
+  font-weight: map-get($font-weights, bold);
+  text-align: center;
+  font-size: map-get($font-sizes, medium);
+  padding: 11.7rem;
 }
 
 // nesting in sass
@@ -63,11 +65,44 @@ $font-sizes: (
 }
 */
 // in the above given example the properties will imply to the paragraph inside the main div
-#main{
-    width: 700px;
+.main {
     margin: auto;
-    p{
+    // if you nest a class inside an element, in plain css it will be written normally
+    // sass is full of shortcuts
+    // like if you want to mention main again while targeting the class `.main-paragraph`, you can do so by substituting main with an ampersan(&) letter
+    // you can substitute the the name of the main object with ampersand inside it
+    // you can substitute the nest parent name with ampersan inside the nested element
+    #{&}-paragraph {
+        // there would be a problem if we just use the ampersan as it will not appear to be nested in plain css as well
+        // it will refer to all the elements even outside the parent, meaning that its nested capabilites will be over
+        // we need to use something called *interpolation* here, it is represented by `#` sign
+        // what interpolation does is that it refers to all the parents behind while nesting
+        // you can use it in this form #{&}
+        width: 700px;
         color: $text-color;
+        transition-property: all;
+        transition-duration: 3s;
+        transition-timing-function: ease-out;
+
+        // we are nesting the hover inside the main para using nesting and ampersand
+        &:hover {
+        color: rgb(0, 17, 255);
+        transform: rotate(360deg) scale(1.22);
+        cursor: crosshair;
+        animation-name: dons;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+
+        @keyframes dons {
+            from {
+            width: 700px;
+            }
+            to {
+            width: 400px;
+            }
+        }
+        width: 400px;
     }
+  }
 }
 // the nested scss will compile to become normal css
