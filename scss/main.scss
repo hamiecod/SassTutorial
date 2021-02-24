@@ -1,3 +1,13 @@
+// partials in scss 
+// we can break the main scss file into smaller components called partials
+// partials are used to break the main file into parts whilst working on a large production level project
+// partials are not read by the scss compiler
+// partials are recognised by prefixing their file names with underscore(_)
+// they are to be linked to the scss file which is further linked to the css file
+// they make the folder structure easy
+// like you can keep the variables in one file, functions in another and resets in another
+@import './resets', './variables';
+
 // we need SCSS compiler to compile scss to css
 // the scss is linked to css, and all the scss is converted to css
 
@@ -13,8 +23,7 @@
 
 // in scss you declare variables by prefixing the variable names with a dollar(peso) sign
 
-$primary-color: rgb(0, 255, 191);
-$text-color: rgb(255, 0, 136);
+
 body {
   background: $primary-color;
   display: flex;
@@ -30,17 +39,7 @@ body {
 // maps in scss are just like objects/classes in javascript
 // the variable as said before is declared by prefixing the variable names with a dollar sign
 // all the keys are to be contained inside the parantheses
-$font-weights: (
-  // "key": value,
-  "regular": 400,
-  "medium": 600,
-  "bold": bold
-);
-$font-sizes: (
-  "small": 12px,
-  "medium": 20px,
-  "large": 28px,
-);
+
 .main {
   // we can get the value of a key in an object by the following way:
   // map-get($mapName, keyName);
