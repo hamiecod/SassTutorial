@@ -19,16 +19,6 @@ body {
   padding: 11.7rem;
 }
 
-/* 
-#main{
-    properties: value;
-    properties: value;
-    p{
-        prop1: value;
-        prop2: value;
-    }
-}
-*/
 .main {
   margin: auto;
 }
@@ -49,8 +39,8 @@ body {
   -webkit-transform: rotate(360deg) scale(1.22);
           transform: rotate(360deg) scale(1.22);
   cursor: crosshair;
-  -webkit-animation-name: dons;
-          animation-name: dons;
+  -webkit-animation-name: wrap;
+          animation-name: wrap;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
@@ -58,7 +48,7 @@ body {
   width: 400px;
 }
 
-@-webkit-keyframes dons {
+@-webkit-keyframes wrap {
   from {
     width: 700px;
   }
@@ -67,7 +57,7 @@ body {
   }
 }
 
-@keyframes dons {
+@keyframes wrap {
   from {
     width: 700px;
   }

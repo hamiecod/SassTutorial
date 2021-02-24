@@ -54,16 +54,14 @@ $font-sizes: (
 // if we want to trigger a paragraph inside main we will do the following obviously:
 // #main p{}
 // but in scss you can nest elements like if a paragraph is inside main you can write the properties for the paragraph inside the main element, example is as follows:
-/* 
-#main{
-    properties: value;
-    properties: value;
-    p{
-        prop1: value;
-        prop2: value;
-    }
-}
-*/
+// #main{
+//     properties: value;
+//     properties: value;
+//     p{
+//         prop1: value;
+//         prop2: value;
+//     }
+// }
 // in the above given example the properties will imply to the paragraph inside the main div
 .main {
     margin: auto;
@@ -89,11 +87,11 @@ $font-sizes: (
         color: rgb(0, 17, 255);
         transform: rotate(360deg) scale(1.22);
         cursor: crosshair;
-        animation-name: dons;
+        animation-name: wrap;
         animation-duration: 3s;
         animation-iteration-count: 1;
 
-        @keyframes dons {
+        @keyframes wrap {
             from {
             width: 700px;
             }
