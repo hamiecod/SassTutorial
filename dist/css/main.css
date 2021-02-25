@@ -62,7 +62,7 @@ body {
           transition-timing-function: ease-out;
 }
 
-.main .main-paragraph1:hover, .main .main-paragraph1 .main .main-paragraph1-paragraph2 {
+.main .main-paragraph1:hover, .main .main-paragraph1 .main .main-paragraph1-paragraph2, .main-paragraph2:hover {
   color: #d0ff00;
   -webkit-transform: rotate(360deg) scale(1.22);
           transform: rotate(360deg) scale(1.22);

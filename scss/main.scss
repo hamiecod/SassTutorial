@@ -118,7 +118,6 @@ body {
      #{&}-paragraph2 {
       @extend .main-paragraph1;
       // the extend command applies all the features of an element to another element
-      @extend .main-paragraph1:hover;
     }
   }
 }
