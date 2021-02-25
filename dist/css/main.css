@@ -51,7 +51,7 @@ body {
   }
 }
 
-.main .main-paragraph {
+.main .main-paragraph1, .main .main-paragraph1 .main .main-paragraph1-paragraph2 {
   width: 700px;
   color: #ff0088;
   -webkit-transition-property: all;
@@ -62,7 +62,7 @@ body {
           transition-timing-function: ease-out;
 }
 
-.main .main-paragraph:hover {
+.main .main-paragraph1:hover, .main .main-paragraph1 .main .main-paragraph1-paragraph2 {
   color: #d0ff00;
   -webkit-transform: rotate(360deg) scale(1.22);
           transform: rotate(360deg) scale(1.22);

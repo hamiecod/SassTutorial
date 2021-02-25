@@ -83,7 +83,7 @@ body {
     // like if you want to mention main again while targeting the class `.main-paragraph`, you can do so by substituting main with an ampersan(&) letter
     // you can substitute the the name of the main object with ampersand inside it
     // you can substitute the nest parent name with ampersan inside the nested element
-    #{&}-paragraph {
+    #{&}-paragraph1 {
         // there would be a problem if we just use the ampersan as it will not appear to be nested in plain css as well
         // it will refer to all the elements even outside the parent, meaning that its nested capabilites will be over
         // we need to use something called *interpolation* here, it is represented by `#` sign
@@ -113,6 +113,12 @@ body {
             }
         }
         width: 400px;
+    }
+     // extending a paragraph(paragraph1 to paragraph2)
+     #{&}-paragraph2 {
+      @extend .main-paragraph1;
+      // the extend command applies all the features of an element to another element
+      @extend .main-paragraph1:hover;
     }
   }
 }
