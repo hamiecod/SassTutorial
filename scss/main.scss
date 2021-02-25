@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // overflow: hidden;
+  overflow: hidden;
 }
 // another property of scss that makes it widely compatible is as follows:
 // css variables are excepted in 90% browsers whereas scss variables have 100% compatibility
@@ -114,11 +114,11 @@ body {
         }
         width: 400px;
     }
-     // extending a paragraph(paragraph1 to paragraph2)
-     #{&}-paragraph2 {
-      @extend .main-paragraph1;
-      // the extend command applies all the features of an element to another element
-    }
+  }
+  // extending a paragraph(paragraph1 to paragraph2)
+  #{&}-paragraph2 {
+    @extend .main-paragraph1;
+    // the extend command applies all the features of an element to another element
   }
 }
 // the nested scss will compile to become normal css

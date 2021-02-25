@@ -16,6 +16,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .main {
@@ -51,7 +52,7 @@ body {
   }
 }
 
-.main .main-paragraph1, .main .main-paragraph1 .main .main-paragraph1-paragraph2 {
+.main .main-paragraph1, .main .main-paragraph2 {
   width: 700px;
   color: #ff0088;
   -webkit-transition-property: all;
@@ -62,7 +63,7 @@ body {
           transition-timing-function: ease-out;
 }
 
-.main .main-paragraph1:hover, .main .main-paragraph1 .main .main-paragraph1-paragraph2, .main-paragraph2:hover {
+.main .main-paragraph1:hover, .main .main-paragraph2:hover {
   color: #d0ff00;
   -webkit-transform: rotate(360deg) scale(1.22);
           transform: rotate(360deg) scale(1.22);
