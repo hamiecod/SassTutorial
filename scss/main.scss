@@ -6,7 +6,11 @@
 // they are to be linked to the scss file which is further linked to the css file
 // they make the folder structure easy
 // like you can keep the variables in one file, functions in another and resets in another
-@import './resets', './variables', './functions';
+@import './resets', './variables', './functions', './mixins';
+// there is a difference between mixins and functions
+// functions are to be used to compute values whereas mixins are to be used with styles
+
+// another usage of mixins can be a switch between dark and light theme
 
 // we need SCSS compiler to compile scss to css
 // the scss is linked to css, and all the scss is converted to css
@@ -29,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
 }
 // another property of scss that makes it widely compatible is as follows:
 // css variables are excepted in 90% browsers whereas scss variables have 100% compatibility
@@ -68,6 +72,11 @@ body {
 // }
 // in the above given example the properties will imply to the paragraph inside the main div
 .main {
+  @include mobile;
+  // you can include a mixin which is a type of shortcut by the following syntax:
+  // @include nameMixin;
+  // you can also supply an arguement inside a mixin
+    @include flexCenter(row);
     margin: auto;
     // if you nest a class inside an element, in plain css it will be written normally
     // sass is full of shortcuts
@@ -88,12 +97,12 @@ body {
 
         // we are nesting the hover inside the main para using nesting and ampersand
         &:hover {
-        color: rgb(0, 17, 255);
-        transform: rotate(360deg) scale(1.22);
-        cursor: crosshair;
-        animation-name: wrap;
-        animation-duration: 3s;
-        animation-iteration-count: 1;
+          color: $hover-color;
+          transform: rotate(360deg) scale(1.22);
+          cursor: crosshair;
+          animation-name: wrap;
+          animation-duration: 3s;
+          animation-iteration-count: 1;
 
         @keyframes wrap {
             from {
@@ -108,3 +117,7 @@ body {
   }
 }
 // the nested scss will compile to become normal css
+
+.light{
+  @include theme($light-theme: true);
+}

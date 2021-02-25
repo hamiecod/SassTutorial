@@ -1,0 +1,22 @@
+// rmixins are just shortcuts for writing long code
+// like there are 10 properties you want to apply to 1000 containers you would only need to write the shortcut and the whole code again and again
+// you can also supply an arguement in mixin
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true){
+    @if $light-theme{
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+}
+
+@mixin mobile{
+    @media (max-width: $mobile-width){
+        flex-direction: column;
+    }
+}

@@ -1,5 +1,6 @@
-$primary-color: rgb(0, 255, 191);
+$primary-color: rgb(62, 63, 63);
 $text-color: rgb(255, 0, 136);
+$hover-color: rgb(208, 255, 0);
 $font-weights: (
   // "key": value,
   "regular": 400,
@@ -11,3 +12,6 @@ $font-sizes: (
   "medium": 20px,
   "large": 28px,
 );
+
+
+$mobile-width: 800px;
