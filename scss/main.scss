@@ -6,7 +6,7 @@
 // they are to be linked to the scss file which is further linked to the css file
 // they make the folder structure easy
 // like you can keep the variables in one file, functions in another and resets in another
-@import './resets', './variables';
+@import './resets', './variables', './functions';
 
 // we need SCSS compiler to compile scss to css
 // the scss is linked to css, and all the scss is converted to css
@@ -43,9 +43,14 @@ body {
 .main {
   // we can get the value of a key in an object by the following way:
   // map-get($mapName, keyName);
-  font-weight: map-get($font-weights, bold);
+
+  // functions can be very helpful while taking options from maps.
+  // you dont need to write the complex syntax again and again, just define a function which stores the key value inside the parameters
+  // font-weight: map-get($font-weights, bold);
+  font-weight: weight(bold);
+  // in the above command, the weight is being set by a function, just like javascript
   text-align: center;
-  font-size: map-get($font-sizes, medium);
+  font-size: sizes(medium);
   padding: 11.7rem;
 }
 

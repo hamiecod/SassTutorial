@@ -1,0 +1,13 @@
+// functions in scss
+// syntax:
+// @function name($variable){
+        // @return map-get($map-name, $variable);
+// }
+// the @return command returns the value
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
+
+@function sizes($size-name){
+    @return map-get($font-sizes, $size-name);
+}
