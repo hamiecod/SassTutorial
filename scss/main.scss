@@ -55,7 +55,7 @@ body {
   // in the above command, the weight is being set by a function, just like javascript
   text-align: center;
   font-size: sizes(medium);
-  padding: 11.7rem;
+  padding: 15rem;
 }
 
 // nesting in sass
@@ -124,5 +124,17 @@ body {
 // the nested scss will compile to become normal css
 
 .light{
-  @include theme($light-theme: true);
+  @include theme($light-theme: false);
+}
+
+// calculations in Scss
+.main{
+  // width: calc(100% - 10%);
+  // the above syntax is for calculation in css
+  // whereas in scss you do not need to contain the calculations inside the calc method, you can just write the calculation just like that without containing them in parenthesis
+  width: 100% - 20%;
+  // the above is the calculation function in scss
+  // the difference between calculations in scss and css are as follows
+  // in scss, the operand units need to be the same whereas in css different operand units will work good
+  // when scss is compiled to css, the calculations in scss are compiled to values in css whereas when you use the pure css calculations it is compiled to css as a method
 }
